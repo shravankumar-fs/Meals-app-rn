@@ -1,0 +1,7 @@
+node_modules
+.expo
+.vscode
+assets/.DS_Store
+assets/fonts/.DS_Store
+.DS_Store
+_dummy.js
