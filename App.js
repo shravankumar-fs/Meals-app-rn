@@ -1,28 +1,24 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import CategoriesScreen from './screens/CategoriesScreen';
-// import { SafeAreaView, SafeAreaProvider } from 'react-native-safe-area-context';
 import { useFonts } from 'expo-font';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-// import { createStackNavigator } from '@react-navigation/stack';
 import MealsOverviewScreen from './screens/MealsOverviewScreen';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import MealDetailScreen from './screens/MealDetailScreen';
+
 export default function App() {
   const [fontsLoaded] = useFonts({
     'open-sans': require('./assets/fonts/OpenSans-Regular.ttf'),
     'open-sans-bold': require('./assets/fonts/OpenSans-Bold.ttf'),
     delius: require('./assets/fonts/Delius-Regular.ttf'),
   });
-
+  if (!fontsLoaded) return null;
   const Stack = createNativeStackNavigator();
-  // const Stack = createStackNavigator();
   return (
     <>
       <GestureHandlerRootView>
-        {/* <SafeAreaProvider>
-        <SafeAreaView style={styles.rootScreen}> */}
         <StatusBar style='light' />
         <NavigationContainer>
           <Stack.Navigator
@@ -47,10 +43,6 @@ export default function App() {
                 backgroundColor: '#1d2731',
               },
             }}
-            // screenOptions={{
-            //   gestureEnabled: true,
-            //   gestureDirection: 'horizontal',
-            // }}
           >
             <Stack.Screen
               name='MealsCategories'
@@ -75,8 +67,6 @@ export default function App() {
             />
           </Stack.Navigator>
         </NavigationContainer>
-        {/* </SafeAreaView>
-      </SafeAreaProvider> */}
       </GestureHandlerRootView>
     </>
   );

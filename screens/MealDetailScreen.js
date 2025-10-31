@@ -49,6 +49,7 @@ const styles = StyleSheet.create({
     margin: 8,
     textAlign: 'center',
     color: 'white',
+    fontFamily: 'delius',
   },
   detailText: {
     color: 'white',

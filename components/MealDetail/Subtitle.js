@@ -16,6 +16,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: 'bold',
     textAlign: 'center',
+    fontFamily: 'delius',
   },
   subtitleContainer: {
     padding: 6,

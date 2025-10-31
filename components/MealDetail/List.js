@@ -22,5 +22,6 @@ const styles = StyleSheet.create({
   itemText: {
     color: '#351401',
     textAlign: 'center',
+    fontFamily: 'delius',
   },
 });
